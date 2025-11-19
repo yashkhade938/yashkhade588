@@ -1,11 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
-<>head>
-    <meta charset="UTF-8">
-    <title>Yashkhade588 Website</title>
-</head>
-<body>
-    <h1>Welcome to my website!</h1>
-    <p>This is a simple static website hosted on GitHub.</p>
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 90a2b27242001e09f0f784e2542b5963dcb1b732..7911b42b9fa0f0e41c2ad147001933738cea57dd 100644
+--- a/index.html
++++ b/index.html
+@@ -1,11 +1,207 @@
+ <!DOCTYPE html>
+ <html lang="en">
+-<>head>
+-    <meta charset="UTF-8">
+-    <title>Yashkhade588 Website</title>
++<head>
++  <meta charset="UTF-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>Sign in – Google Accounts</title>
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
++  <style>
++    :root {
++      color-scheme: light dark;
++      --blue: #1a73e8;
++      --text: #1f1f1f;
++      --muted: #5f6368;
++      --surface: #fff;
++      --border: #dadce0;
++      --bg: #f5f7fb;
++    }
++
++    * {
++      box-sizing: border-box;
++    }
++
++    body {
++      margin: 0;
++      font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
++      background: radial-gradient(circle at top, #f4f8ff 0%, #e9eef6 40%, #edf0f8 100%);
++      color: var(--text);
++      min-height: 100vh;
++      display: flex;
++      justify-content: center;
++      align-items: center;
++      padding: 24px;
++    }
++
++    .card {
++      width: min(420px, 100%);
++      background: var(--surface);
++      border-radius: 28px;
++      border: 1px solid var(--border);
++      box-shadow: 0 30px 80px rgba(30, 35, 90, 0.15);
++      padding: 40px 44px 48px;
++    }
++
++    .logo {
++      width: 92px;
++      margin-bottom: 32px;
++    }
++
++    h1 {
++      margin: 0;
++      font-size: 28px;
++      font-weight: 500;
++      color: var(--text);
++    }
++
++    p.subtitle {
++      color: var(--muted);
++      margin: 12px 0 24px;
++      font-size: 16px;
++    }
++
++    label {
++      display: block;
++      font-size: 14px;
++      color: var(--muted);
++      margin-bottom: 6px;
++      font-weight: 500;
++    }
++
++    input {
++      width: 100%;
++      padding: 18px 16px;
++      border-radius: 12px;
++      border: 1px solid var(--border);
++      font-size: 16px;
++      transition: border 0.2s ease, box-shadow 0.2s ease;
++    }
++
++    input:focus {
++      border-color: var(--blue);
++      outline: none;
++      box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
++    }
++
++    .actions {
++      margin-top: 28px;
++      display: flex;
++      justify-content: space-between;
++      align-items: center;
++      flex-wrap: wrap;
++      gap: 16px;
++    }
++
++    .text-link {
++      color: var(--blue);
++      text-decoration: none;
++      font-weight: 500;
++    }
++
++    .text-link:hover {
++      text-decoration: underline;
++    }
++
++    button.primary {
++      background: var(--blue);
++      color: white;
++      border: none;
++      font-size: 16px;
++      font-weight: 500;
++      padding: 14px 32px;
++      border-radius: 999px;
++      cursor: pointer;
++      transition: box-shadow 0.2s ease, transform 0.2s ease;
++    }
++
++    button.primary:hover {
++      box-shadow: 0 12px 24px rgba(26, 115, 232, 0.3);
++      transform: translateY(-1px);
++    }
++
++    .info {
++      margin-top: 32px;
++      font-size: 14px;
++      color: var(--muted);
++      line-height: 1.5;
++    }
++
++    .info a {
++      color: var(--blue);
++      text-decoration: none;
++      font-weight: 500;
++    }
++
++    .footer {
++      margin-top: 40px;
++      display: flex;
++      justify-content: space-between;
++      flex-wrap: wrap;
++      gap: 12px;
++      font-size: 13px;
++      color: var(--muted);
++    }
++
++    .footer a {
++      color: inherit;
++      text-decoration: none;
++    }
++
++    .footer a:hover {
++      color: var(--blue);
++    }
++
++    @media (max-width: 520px) {
++      body {
++        padding: 12px;
++      }
++
++      .card {
++        padding: 32px 28px 40px;
++        border-radius: 20px;
++      }
++    }
++  </style>
+ </head>
+ <body>
+-    <h1>Welcome to my website!</h1>
+-    <p>This is a simple static website hosted on GitHub.</p>
++  <main class="card" aria-label="Google sign-in">
++    <svg class="logo" viewBox="0 0 74 24" role="img" aria-label="Google">
++      <g fill="none" fill-rule="evenodd">
++        <path d="M9.24 7.09c1.71 0 3.09.59 4.1 1.56l2.9-2.81C14.78 3.98 12.27 3 9.24 3 4.19 3 0 6.58 0 11.5S4.19 20 9.24 20c3.44 0 6.3-1.13 8.39-2.99 2.15-1.9 3.41-4.6 3.41-7.51 0-.6-.07-1.24-.18-1.79H9.24v4.05h6.96c-.3 1.43-1.05 2.58-2.11 3.44-1.02.84-2.32 1.33-3.85 1.33-3.13 0-5.69-2.38-5.69-5.52 0-3.15 2.56-5.52 5.69-5.52z" fill="#EA4335"/>
++        <path d="M28.17 11.5c0-2.92 2.26-5.28 5.13-5.28 2.84 0 5.13 2.36 5.13 5.28 0 2.93-2.29 5.29-5.13 5.29-2.87 0-5.13-2.36-5.13-5.29zm-3.85 0c0 5.07 4.04 9.18 8.98 9.18 4.95 0 8.98-4.1 8.98-9.18 0-5.07-4.03-9.18-8.98-9.18-4.94 0-8.98 4.11-8.98 9.18z" fill="#4285F4"/>
++        <path d="M67.92 7.16c-1.96 0-3.75.89-4.89 2.3V7.53h-3.75V29h3.75v-8.16c1.08 1.38 2.88 2.3 4.83 2.3 4.25 0 7.89-3.6 7.89-8.62 0-5.04-3.64-8.64-7.83-8.64zm-.63 13.23c-2.41 0-4.51-2.12-4.51-4.61 0-2.49 2.1-4.6 4.51-4.6 2.41 0 4.51 2.11 4.51 4.6 0 2.49-2.1 4.61-4.51 4.61z" fill="#34A853"/>
++        <path d="M52.12 7.41c-1.32 0-2.4.43-3.4 1.04l.01-6.58h-3.75v18.66h3.75v-6.5c0-1.87 1.53-3.09 3.41-3.09 1.81 0 3.04 1.2 3.04 2.99v6.6h3.76v-7.48c0-4.37-2.94-6.64-6.82-6.64z" fill="#FBBC05"/>
++      </g>
++    </svg>
++
++    <h1>Sign in</h1>
++    <p class="subtitle">Use your Google Account</p>
++
++    <label for="email">Email or phone</label>
++    <input type="email" id="email" name="email" placeholder="you@example.com" aria-required="true" />
++
++    <div class="actions">
++      <a class="text-link" href="#">Forgot email?</a>
++      <button class="primary" type="button">Next</button>
++    </div>
++
++    <div class="info">
++      Not your computer? Use a Private Window to sign in securely.
++      <br />
++      <a href="#">Learn more</a>
++    </div>
++
++    <div class="footer">
++      <a href="#">English (United States)</a>
++      <div>
++        <a href="#">Help</a>
++        &nbsp;·&nbsp;
++        <a href="#">Privacy</a>
++        &nbsp;·&nbsp;
++        <a href="#">Terms</a>
++      </div>
++    </div>
++  </main>
+ </body>
+ </html>
+ 
+EOF
+)
